@@ -24,10 +24,10 @@
 3. Clique em "Borrar Arquivos da Pasta" para aplicar nos demais PDFs
 ```
 ### Interface do Programa
-![Interface do programa](images/interface.png)
+![Interface do programa](imagens/interface.png)
 
 ### Exemplo de PDF Borrado
-![PDF com redaction aplicado](images/pdf_borrado.png)
+![PDF com redaction aplicado](imagens/pdf_borrado.png)
 
 ---
 
