@@ -7,7 +7,7 @@ import os
 class PDFEditorApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Blur_PDF v2.1")
+        self.root.title("Blur_PDF v2.2")
         self.root.geometry("1000x700")
         self.root.configure(bg="#2c3e50")
 
@@ -39,11 +39,20 @@ class PDFEditorApp:
         self.canvas_frame.pack(fill=tk.BOTH, expand=True)
 
         self.canvas = tk.Canvas(self.canvas_frame, bg="white")
-        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.canvas.grid(row=0, column=0, sticky="nsew")
 
         self.scroll_y = tk.Scrollbar(self.canvas_frame, orient=tk.VERTICAL, command=self.canvas.yview)
-        self.scroll_y.pack(side=tk.RIGHT, fill=tk.Y)
+        self.scroll_y.grid(row=0, column=1, sticky="ns")
         self.canvas.configure(yscrollcommand=self.scroll_y.set)
+
+        self.scroll_x = tk.Scrollbar(self.canvas_frame, orient=tk.HORIZONTAL, command=self.canvas.xview)
+        self.scroll_x.grid(row=1, column=0, sticky="ew")
+        self.canvas.configure(xscrollcommand=self.scroll_x.set)
+
+        self.canvas_frame.rowconfigure(0, weight=1)
+        self.canvas_frame.columnconfigure(0, weight=1)
+        
+
 
         self.retangulos = []
         self.rect_start = None
@@ -59,7 +68,7 @@ class PDFEditorApp:
         self.texto_tutorial_id = self.canvas.create_text(
             500, 350,  
             text=(
-                "Bem-vindo ao Blur_PDF v2.1!\n\n"
+                "Bem-vindo ao Blur_PDF v2.2!\n\n"
                 "1. Clique em 'Carregar PDF de Referência' para selecionar um arquivo.\n"
                 "- Esse arquivo vai servir com base de referência para o programa identificar os lugares corretos para borrar.\n\n"
 
