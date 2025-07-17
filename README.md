@@ -1,4 +1,4 @@
-# Blur_PDF v2.1 🕵️‍♂️🔒
+# Blur_PDF v2.2 🕵️‍♂️🔒
 
 **Interface gráfica para redigir (borrar) automaticamente áreas de múltiplos PDFs com base em um PDF de referência.**
 
@@ -74,6 +74,17 @@ Ao borrar arquivos em massa, os PDFs editados são salvos em:
 - O programa considera **apenas a primeira página** dos PDFs.
 - O redaction (borrão) é feito de forma **permanente** e **irreversível**.
 - O arquivo de referência deve ter a **mesma estrutura visual** dos arquivos a serem processados.
+
+---
+
+## 🆕 Atualizações
+
+### 🔖 Versão 2.2 – Julho de 2025
+
+- Adicionado **scroll horizontal (eixo X)** para navegação em páginas largas.
+- Interface adaptada para usar `grid()` em vez de `pack()` no visualizador, permitindo melhor controle dos scrolls.
+- Aprimorada a exibição de páginas PDF grandes com redimensionamento dinâmico.
+- Preparação do projeto para futuras melhorias como zoom e miniaturas.
 
 ---
 
